@@ -6,10 +6,10 @@ Program is intended to simplify the execution of several .exe files that are to 
 ---
 ## Tasks:
 - [ ] Create program to execute several .exe files in one go 
-  - [ ] Executables should all be stored in `New_Install_Package`
-  - [ ] Program can see the files it needs
+  - [x] Executables should all be stored in `New_Install_Package`
+  - [x] Program can see the files it needs
   - [ ] Program can execute the files it needs
-- [ ] A file containing a list of files to execute should be added to `New_Install_Package`
+- [x] A file containing a list of files to execute should be added to `New_Install_Package`
 - [x] Create program to quickly compile main program into .exe program
 
 

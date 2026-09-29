@@ -19,19 +19,21 @@ Author: Zachary Stewart
 import os, configparser, shutil, subprocess, asyncio
 
 
-async def main():
+def main():
   # sets location where executables are to be stored
   programs_file = "New_Install_Package"
   # gets relative location of cmd.exe
   cmd = shutil.which("cmd.exe")
 
-  # 
+  # loads and reads .ini file
   config = configparser.ConfigParser()
   config.read('./New_Install_Package/Install_List/install_list.ini')
+  # retrieves list of programs to be executed
   install_list = config["install_list"]["install_targets"]
-  # print(install_list)
+  # turns list into usable array
   install_list = install_list.split(",")
   
+  # tracks program execution scripts
   processes = []
 
   try:
@@ -64,6 +66,6 @@ async def main():
 
 if __name__ == "__main__":
   # calling the main function
-  asyncio.run(main())
+  main()
   # remove line from final product
   input("\nPress Enter to exit...")
